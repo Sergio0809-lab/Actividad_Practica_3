@@ -34,9 +34,7 @@
             groupBox3 = new GroupBox();
             button4 = new Button();
             textBox9 = new TextBox();
-            textBox6 = new TextBox();
             label9 = new Label();
-            label6 = new Label();
             label8 = new Label();
             textBox7 = new TextBox();
             textBox8 = new TextBox();
@@ -46,8 +44,8 @@
             textBox5 = new TextBox();
             label5 = new Label();
             groupBox1 = new GroupBox();
+            comboBox1 = new ComboBox();
             button2 = new Button();
-            textBox4 = new TextBox();
             label4 = new Label();
             textBox3 = new TextBox();
             label3 = new Label();
@@ -55,6 +53,7 @@
             label2 = new Label();
             textBox1 = new TextBox();
             label1 = new Label();
+            comboBox3 = new ComboBox();
             groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             groupBox3.SuspendLayout();
@@ -92,30 +91,30 @@
             // 
             // groupBox3
             // 
+            groupBox3.Controls.Add(comboBox3);
             groupBox3.Controls.Add(button4);
             groupBox3.Controls.Add(textBox9);
-            groupBox3.Controls.Add(textBox6);
             groupBox3.Controls.Add(label9);
-            groupBox3.Controls.Add(label6);
             groupBox3.Controls.Add(label8);
             groupBox3.Controls.Add(textBox7);
             groupBox3.Controls.Add(textBox8);
             groupBox3.Controls.Add(label7);
-            groupBox3.Location = new Point(878, 36);
+            groupBox3.Location = new Point(878, 45);
             groupBox3.Name = "groupBox3";
-            groupBox3.Size = new Size(449, 257);
+            groupBox3.Size = new Size(449, 248);
             groupBox3.TabIndex = 10;
             groupBox3.TabStop = false;
             groupBox3.Text = "Actualizar";
             // 
             // button4
             // 
+            button4.BackColor = Color.SkyBlue;
             button4.Location = new Point(166, 200);
             button4.Name = "button4";
             button4.Size = new Size(107, 38);
             button4.TabIndex = 17;
             button4.Text = "Actualizar";
-            button4.UseVisualStyleBackColor = true;
+            button4.UseVisualStyleBackColor = false;
             // 
             // textBox9
             // 
@@ -123,13 +122,6 @@
             textBox9.Name = "textBox9";
             textBox9.Size = new Size(164, 27);
             textBox9.TabIndex = 10;
-            // 
-            // textBox6
-            // 
-            textBox6.Location = new Point(209, 147);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(229, 27);
-            textBox6.TabIndex = 16;
             // 
             // label9
             // 
@@ -139,15 +131,6 @@
             label9.Size = new Size(24, 20);
             label9.TabIndex = 9;
             label9.Text = "ID";
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Location = new Point(209, 124);
-            label6.Name = "label6";
-            label6.Size = new Size(132, 20);
-            label6.TabIndex = 15;
-            label6.Text = "Correo electronico";
             // 
             // label8
             // 
@@ -186,28 +169,30 @@
             groupBox2.Controls.Add(button3);
             groupBox2.Controls.Add(textBox5);
             groupBox2.Controls.Add(label5);
-            groupBox2.Location = new Point(485, 51);
+            groupBox2.Location = new Point(559, 45);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(365, 242);
+            groupBox2.Size = new Size(279, 242);
             groupBox2.TabIndex = 11;
             groupBox2.TabStop = false;
             groupBox2.Text = "Eliminar";
             // 
             // button3
             // 
-            button3.Location = new Point(104, 157);
+            button3.BackColor = Color.Crimson;
+            button3.Location = new Point(61, 91);
             button3.Name = "button3";
             button3.Size = new Size(142, 51);
             button3.TabIndex = 9;
             button3.Text = "Eliminar";
-            button3.UseVisualStyleBackColor = true;
+            button3.UseVisualStyleBackColor = false;
             // 
             // textBox5
             // 
-            textBox5.Location = new Point(54, 46);
+            textBox5.Location = new Point(22, 46);
             textBox5.Name = "textBox5";
             textBox5.Size = new Size(224, 27);
             textBox5.TabIndex = 10;
+            textBox5.TextChanged += textBox5_TextChanged;
             // 
             // label5
             // 
@@ -220,8 +205,8 @@
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(comboBox1);
             groupBox1.Controls.Add(button2);
-            groupBox1.Controls.Add(textBox4);
             groupBox1.Controls.Add(label4);
             groupBox1.Controls.Add(textBox3);
             groupBox1.Controls.Add(label3);
@@ -229,12 +214,22 @@
             groupBox1.Controls.Add(label2);
             groupBox1.Controls.Add(textBox1);
             groupBox1.Controls.Add(label1);
-            groupBox1.Location = new Point(32, 36);
+            groupBox1.Location = new Point(32, 45);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(424, 257);
+            groupBox1.Size = new Size(493, 248);
             groupBox1.TabIndex = 8;
             groupBox1.TabStop = false;
             groupBox1.Text = "Insertar";
+            // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "Alimentos", "Bebidas", "Limpieza", "Electrónicos" });
+            comboBox1.Location = new Point(240, 79);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(151, 28);
+            comboBox1.TabIndex = 9;
+            comboBox1.Text = "Categorias";
             // 
             // button2
             // 
@@ -245,21 +240,13 @@
             button2.Text = "Agregar";
             button2.UseVisualStyleBackColor = true;
             // 
-            // textBox4
-            // 
-            textBox4.Location = new Point(189, 147);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(229, 27);
-            textBox4.TabIndex = 7;
-            // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Location = new Point(189, 124);
             label4.Name = "label4";
-            label4.Size = new Size(132, 20);
+            label4.Size = new Size(0, 20);
             label4.TabIndex = 6;
-            label4.Text = "Correo electronico";
             // 
             // textBox3
             // 
@@ -309,6 +296,17 @@
             label1.TabIndex = 0;
             label1.Text = "ID";
             // 
+            // comboBox3
+            // 
+            comboBox3.FormattingEnabled = true;
+            comboBox3.Items.AddRange(new object[] { "Alimentos", "Bebidas", "Limpieza", "Electrónicos" });
+            comboBox3.Location = new Point(276, 90);
+            comboBox3.Name = "comboBox3";
+            comboBox3.Size = new Size(151, 28);
+            comboBox3.TabIndex = 10;
+            comboBox3.Text = "Categorias";
+            comboBox3.SelectedIndexChanged += comboBox3_SelectedIndexChanged;
+            // 
             // Productos
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -340,9 +338,7 @@
         private GroupBox groupBox3;
         private Button button4;
         private TextBox textBox9;
-        private TextBox textBox6;
         private Label label9;
-        private Label label6;
         private Label label8;
         private TextBox textBox7;
         private TextBox textBox8;
@@ -353,7 +349,6 @@
         private Label label5;
         private GroupBox groupBox1;
         private Button button2;
-        private TextBox textBox4;
         private Label label4;
         private TextBox textBox3;
         private Label label3;
@@ -361,5 +356,7 @@
         private Label label2;
         private TextBox textBox1;
         private Label label1;
+        private ComboBox comboBox1;
+        private ComboBox comboBox3;
     }
 }

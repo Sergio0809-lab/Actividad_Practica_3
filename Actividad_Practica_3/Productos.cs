@@ -16,5 +16,15 @@ namespace Actividad_Practica_3
         {
             InitializeComponent();
         }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
