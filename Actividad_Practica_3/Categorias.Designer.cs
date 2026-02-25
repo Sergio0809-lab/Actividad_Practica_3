@@ -56,12 +56,13 @@
             // 
             // button1
             // 
-            button1.Location = new Point(269, 258);
+            button1.BackColor = Color.DodgerBlue;
+            button1.Location = new Point(45, 258);
             button1.Name = "button1";
-            button1.Size = new Size(748, 75);
+            button1.Size = new Size(1279, 75);
             button1.TabIndex = 12;
             button1.Text = "Cargar";
-            button1.UseVisualStyleBackColor = true;
+            button1.UseVisualStyleBackColor = false;
             // 
             // groupBox4
             // 
@@ -98,12 +99,13 @@
             // 
             // button4
             // 
+            button4.BackColor = Color.SkyBlue;
             button4.Location = new Point(166, 103);
             button4.Name = "button4";
             button4.Size = new Size(107, 38);
             button4.TabIndex = 17;
             button4.Text = "Actualizar";
-            button4.UseVisualStyleBackColor = true;
+            button4.UseVisualStyleBackColor = false;
             button4.Click += button4_Click;
             // 
             // textBox9
@@ -152,12 +154,13 @@
             // 
             // button3
             // 
+            button3.BackColor = Color.Crimson;
             button3.Location = new Point(100, 87);
             button3.Name = "button3";
             button3.Size = new Size(142, 51);
             button3.TabIndex = 9;
             button3.Text = "Eliminar";
-            button3.UseVisualStyleBackColor = true;
+            button3.UseVisualStyleBackColor = false;
             // 
             // textBox5
             // 
@@ -192,12 +195,13 @@
             // 
             // button2
             // 
+            button2.BackColor = Color.Cyan;
             button2.Location = new Point(277, 61);
             button2.Name = "button2";
             button2.Size = new Size(107, 51);
             button2.TabIndex = 8;
             button2.Text = "Agregar";
-            button2.UseVisualStyleBackColor = true;
+            button2.UseVisualStyleBackColor = false;
             // 
             // textBox2
             // 

@@ -30,6 +30,7 @@
         {
             button1 = new Button();
             groupBox4 = new GroupBox();
+            dataGridView1 = new DataGridView();
             groupBox3 = new GroupBox();
             button4 = new Button();
             textBox9 = new TextBox();
@@ -37,7 +38,6 @@
             label9 = new Label();
             label6 = new Label();
             label8 = new Label();
-            textBox7 = new TextBox();
             textBox8 = new TextBox();
             label7 = new Label();
             groupBox2 = new GroupBox();
@@ -48,28 +48,29 @@
             button2 = new Button();
             textBox4 = new TextBox();
             label4 = new Label();
-            textBox3 = new TextBox();
             label3 = new Label();
             textBox2 = new TextBox();
             label2 = new Label();
             textBox1 = new TextBox();
             label1 = new Label();
-            dataGridView1 = new DataGridView();
+            maskedTextBox1 = new MaskedTextBox();
+            maskedTextBox2 = new MaskedTextBox();
             groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             groupBox3.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // button1
             // 
+            button1.BackColor = Color.DodgerBlue;
             button1.Location = new Point(51, 303);
             button1.Name = "button1";
             button1.Size = new Size(1257, 75);
             button1.TabIndex = 7;
             button1.Text = "Cargar";
-            button1.UseVisualStyleBackColor = true;
+            button1.UseVisualStyleBackColor = false;
             // 
             // groupBox4
             // 
@@ -81,15 +82,24 @@
             groupBox4.TabStop = false;
             groupBox4.Text = "Mostrar";
             // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(16, 26);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.Size = new Size(1268, 236);
+            dataGridView1.TabIndex = 0;
+            // 
             // groupBox3
             // 
+            groupBox3.Controls.Add(maskedTextBox2);
             groupBox3.Controls.Add(button4);
             groupBox3.Controls.Add(textBox9);
             groupBox3.Controls.Add(textBox6);
             groupBox3.Controls.Add(label9);
             groupBox3.Controls.Add(label6);
             groupBox3.Controls.Add(label8);
-            groupBox3.Controls.Add(textBox7);
             groupBox3.Controls.Add(textBox8);
             groupBox3.Controls.Add(label7);
             groupBox3.Location = new Point(881, 22);
@@ -101,12 +111,13 @@
             // 
             // button4
             // 
+            button4.BackColor = Color.SkyBlue;
             button4.Location = new Point(166, 200);
             button4.Name = "button4";
             button4.Size = new Size(107, 38);
             button4.TabIndex = 17;
             button4.Text = "Actualizar";
-            button4.UseVisualStyleBackColor = true;
+            button4.UseVisualStyleBackColor = false;
             // 
             // textBox9
             // 
@@ -149,13 +160,6 @@
             label8.TabIndex = 11;
             label8.Text = "Nombre";
             // 
-            // textBox7
-            // 
-            textBox7.Location = new Point(26, 147);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(150, 27);
-            textBox7.TabIndex = 14;
-            // 
             // textBox8
             // 
             textBox8.Location = new Point(209, 46);
@@ -186,12 +190,13 @@
             // 
             // button3
             // 
+            button3.BackColor = Color.Crimson;
             button3.Location = new Point(104, 157);
             button3.Name = "button3";
             button3.Size = new Size(142, 51);
             button3.TabIndex = 9;
             button3.Text = "Eliminar";
-            button3.UseVisualStyleBackColor = true;
+            button3.UseVisualStyleBackColor = false;
             // 
             // textBox5
             // 
@@ -211,10 +216,10 @@
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(maskedTextBox1);
             groupBox1.Controls.Add(button2);
             groupBox1.Controls.Add(textBox4);
             groupBox1.Controls.Add(label4);
-            groupBox1.Controls.Add(textBox3);
             groupBox1.Controls.Add(label3);
             groupBox1.Controls.Add(textBox2);
             groupBox1.Controls.Add(label2);
@@ -229,12 +234,13 @@
             // 
             // button2
             // 
+            button2.BackColor = Color.Cyan;
             button2.Location = new Point(162, 200);
             button2.Name = "button2";
             button2.Size = new Size(107, 51);
             button2.TabIndex = 8;
             button2.Text = "Agregar";
-            button2.UseVisualStyleBackColor = true;
+            button2.UseVisualStyleBackColor = false;
             // 
             // textBox4
             // 
@@ -251,13 +257,6 @@
             label4.Size = new Size(132, 20);
             label4.TabIndex = 6;
             label4.Text = "Correo electronico";
-            // 
-            // textBox3
-            // 
-            textBox3.Location = new Point(6, 147);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(150, 27);
-            textBox3.TabIndex = 5;
             // 
             // label3
             // 
@@ -301,14 +300,23 @@
             label1.TabIndex = 0;
             label1.Text = "ID";
             // 
-            // dataGridView1
+            // maskedTextBox1
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(16, 26);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(1268, 236);
-            dataGridView1.TabIndex = 0;
+            maskedTextBox1.Font = new Font("Segoe UI", 11F);
+            maskedTextBox1.Location = new Point(6, 147);
+            maskedTextBox1.Mask = "(999) 000-0000";
+            maskedTextBox1.Name = "maskedTextBox1";
+            maskedTextBox1.Size = new Size(164, 32);
+            maskedTextBox1.TabIndex = 11;
+            // 
+            // maskedTextBox2
+            // 
+            maskedTextBox2.Font = new Font("Segoe UI", 11F);
+            maskedTextBox2.Location = new Point(26, 147);
+            maskedTextBox2.Mask = "(999) 000-0000";
+            maskedTextBox2.Name = "maskedTextBox2";
+            maskedTextBox2.Size = new Size(164, 32);
+            maskedTextBox2.TabIndex = 18;
             // 
             // Proveedores
             // 
@@ -323,13 +331,13 @@
             Name = "Proveedores";
             Text = "Proveedores";
             groupBox4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             groupBox3.ResumeLayout(false);
             groupBox3.PerformLayout();
             groupBox2.ResumeLayout(false);
             groupBox2.PerformLayout();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }
 
@@ -343,7 +351,6 @@
         private Button button2;
         private TextBox textBox4;
         private Label label4;
-        private TextBox textBox3;
         private Label label3;
         private TextBox textBox2;
         private Label label2;
@@ -355,12 +362,13 @@
         private Label label9;
         private Label label6;
         private Label label8;
-        private TextBox textBox7;
         private TextBox textBox8;
         private Label label7;
         private Button button3;
         private TextBox textBox5;
         private Label label5;
         private DataGridView dataGridView1;
+        private MaskedTextBox maskedTextBox2;
+        private MaskedTextBox maskedTextBox1;
     }
 }

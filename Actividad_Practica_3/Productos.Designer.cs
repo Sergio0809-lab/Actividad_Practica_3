@@ -32,11 +32,11 @@
             groupBox4 = new GroupBox();
             dataGridView1 = new DataGridView();
             groupBox3 = new GroupBox();
+            comboBox3 = new ComboBox();
             button4 = new Button();
             textBox9 = new TextBox();
             label9 = new Label();
             label8 = new Label();
-            textBox7 = new TextBox();
             textBox8 = new TextBox();
             label7 = new Label();
             groupBox2 = new GroupBox();
@@ -47,13 +47,21 @@
             comboBox1 = new ComboBox();
             button2 = new Button();
             label4 = new Label();
-            textBox3 = new TextBox();
-            label3 = new Label();
             textBox2 = new TextBox();
             label2 = new Label();
             textBox1 = new TextBox();
             label1 = new Label();
-            comboBox3 = new ComboBox();
+            textBox3 = new TextBox();
+            textBox4 = new TextBox();
+            label3 = new Label();
+            textBox6 = new TextBox();
+            label6 = new Label();
+            textBox7 = new TextBox();
+            label10 = new Label();
+            textBox10 = new TextBox();
+            label11 = new Label();
+            textBox11 = new TextBox();
+            label12 = new Label();
             groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             groupBox3.SuspendLayout();
@@ -63,12 +71,14 @@
             // 
             // button1
             // 
+            button1.BackColor = Color.DodgerBlue;
+            button1.Font = new Font("Segoe UI", 15F);
             button1.Location = new Point(48, 317);
             button1.Name = "button1";
             button1.Size = new Size(1257, 75);
             button1.TabIndex = 12;
             button1.Text = "Cargar";
-            button1.UseVisualStyleBackColor = true;
+            button1.UseVisualStyleBackColor = false;
             // 
             // groupBox4
             // 
@@ -91,27 +101,43 @@
             // 
             // groupBox3
             // 
+            groupBox3.Controls.Add(textBox11);
+            groupBox3.Controls.Add(textBox10);
+            groupBox3.Controls.Add(label12);
+            groupBox3.Controls.Add(label11);
+            groupBox3.Controls.Add(textBox3);
             groupBox3.Controls.Add(comboBox3);
             groupBox3.Controls.Add(button4);
             groupBox3.Controls.Add(textBox9);
             groupBox3.Controls.Add(label9);
             groupBox3.Controls.Add(label8);
-            groupBox3.Controls.Add(textBox7);
             groupBox3.Controls.Add(textBox8);
             groupBox3.Controls.Add(label7);
-            groupBox3.Location = new Point(878, 45);
+            groupBox3.Location = new Point(861, 35);
             groupBox3.Name = "groupBox3";
-            groupBox3.Size = new Size(449, 248);
+            groupBox3.Size = new Size(466, 276);
             groupBox3.TabIndex = 10;
             groupBox3.TabStop = false;
             groupBox3.Text = "Actualizar";
             // 
+            // comboBox3
+            // 
+            comboBox3.FormattingEnabled = true;
+            comboBox3.Items.AddRange(new object[] { "Alimentos", "Bebidas", "Limpieza", "Electrónicos" });
+            comboBox3.Location = new Point(345, 110);
+            comboBox3.Name = "comboBox3";
+            comboBox3.Size = new Size(93, 28);
+            comboBox3.TabIndex = 10;
+            comboBox3.Text = "Categorias";
+            comboBox3.SelectedIndexChanged += comboBox3_SelectedIndexChanged;
+            // 
             // button4
             // 
             button4.BackColor = Color.SkyBlue;
-            button4.Location = new Point(166, 200);
+            button4.Font = new Font("Segoe UI", 10F);
+            button4.Location = new Point(342, 191);
             button4.Name = "button4";
-            button4.Size = new Size(107, 38);
+            button4.Size = new Size(101, 51);
             button4.TabIndex = 17;
             button4.Text = "Actualizar";
             button4.UseVisualStyleBackColor = false;
@@ -141,13 +167,6 @@
             label8.TabIndex = 11;
             label8.Text = "Nombre";
             // 
-            // textBox7
-            // 
-            textBox7.Location = new Point(26, 147);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(150, 27);
-            textBox7.TabIndex = 14;
-            // 
             // textBox8
             // 
             textBox8.Location = new Point(209, 46);
@@ -158,11 +177,11 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(26, 124);
+            label7.Location = new Point(36, 90);
             label7.Name = "label7";
-            label7.Size = new Size(67, 20);
+            label7.Size = new Size(45, 20);
             label7.TabIndex = 13;
-            label7.Text = "Telefono";
+            label7.Text = "Stock";
             // 
             // groupBox2
             // 
@@ -205,18 +224,22 @@
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(textBox7);
+            groupBox1.Controls.Add(label10);
+            groupBox1.Controls.Add(textBox6);
+            groupBox1.Controls.Add(label6);
+            groupBox1.Controls.Add(textBox4);
+            groupBox1.Controls.Add(label3);
             groupBox1.Controls.Add(comboBox1);
             groupBox1.Controls.Add(button2);
             groupBox1.Controls.Add(label4);
-            groupBox1.Controls.Add(textBox3);
-            groupBox1.Controls.Add(label3);
             groupBox1.Controls.Add(textBox2);
             groupBox1.Controls.Add(label2);
             groupBox1.Controls.Add(textBox1);
             groupBox1.Controls.Add(label1);
-            groupBox1.Location = new Point(32, 45);
+            groupBox1.Location = new Point(32, 12);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(493, 248);
+            groupBox1.Size = new Size(493, 281);
             groupBox1.TabIndex = 8;
             groupBox1.TabStop = false;
             groupBox1.Text = "Insertar";
@@ -225,20 +248,21 @@
             // 
             comboBox1.FormattingEnabled = true;
             comboBox1.Items.AddRange(new object[] { "Alimentos", "Bebidas", "Limpieza", "Electrónicos" });
-            comboBox1.Location = new Point(240, 79);
+            comboBox1.Location = new Point(394, 113);
             comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(151, 28);
+            comboBox1.Size = new Size(93, 28);
             comboBox1.TabIndex = 9;
             comboBox1.Text = "Categorias";
             // 
             // button2
             // 
-            button2.Location = new Point(162, 200);
+            button2.BackColor = Color.Cyan;
+            button2.Location = new Point(380, 220);
             button2.Name = "button2";
             button2.Size = new Size(107, 51);
             button2.TabIndex = 8;
             button2.Text = "Agregar";
-            button2.UseVisualStyleBackColor = true;
+            button2.UseVisualStyleBackColor = false;
             // 
             // label4
             // 
@@ -247,22 +271,6 @@
             label4.Name = "label4";
             label4.Size = new Size(0, 20);
             label4.TabIndex = 6;
-            // 
-            // textBox3
-            // 
-            textBox3.Location = new Point(6, 147);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(150, 27);
-            textBox3.TabIndex = 5;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(6, 124);
-            label3.Name = "label3";
-            label3.Size = new Size(67, 20);
-            label3.TabIndex = 4;
-            label3.Text = "Telefono";
             // 
             // textBox2
             // 
@@ -296,16 +304,95 @@
             label1.TabIndex = 0;
             label1.Text = "ID";
             // 
-            // comboBox3
+            // textBox3
             // 
-            comboBox3.FormattingEnabled = true;
-            comboBox3.Items.AddRange(new object[] { "Alimentos", "Bebidas", "Limpieza", "Electrónicos" });
-            comboBox3.Location = new Point(276, 90);
-            comboBox3.Name = "comboBox3";
-            comboBox3.Size = new Size(151, 28);
-            comboBox3.TabIndex = 10;
-            comboBox3.Text = "Categorias";
-            comboBox3.SelectedIndexChanged += comboBox3_SelectedIndexChanged;
+            textBox3.Location = new Point(26, 113);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(89, 27);
+            textBox3.TabIndex = 19;
+            // 
+            // textBox4
+            // 
+            textBox4.Location = new Point(16, 113);
+            textBox4.Name = "textBox4";
+            textBox4.Size = new Size(89, 27);
+            textBox4.TabIndex = 21;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(16, 90);
+            label3.Name = "label3";
+            label3.Size = new Size(45, 20);
+            label3.TabIndex = 20;
+            label3.Text = "Stock";
+            // 
+            // textBox6
+            // 
+            textBox6.Location = new Point(16, 183);
+            textBox6.Multiline = true;
+            textBox6.Name = "textBox6";
+            textBox6.Size = new Size(305, 88);
+            textBox6.TabIndex = 23;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(16, 160);
+            label6.Name = "label6";
+            label6.Size = new Size(87, 20);
+            label6.TabIndex = 22;
+            label6.Text = "Descripcion";
+            // 
+            // textBox7
+            // 
+            textBox7.Location = new Point(189, 113);
+            textBox7.Name = "textBox7";
+            textBox7.Size = new Size(155, 27);
+            textBox7.TabIndex = 25;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Location = new Point(189, 90);
+            label10.Name = "label10";
+            label10.Size = new Size(50, 20);
+            label10.TabIndex = 24;
+            label10.Text = "Precio";
+            // 
+            // textBox10
+            // 
+            textBox10.Location = new Point(6, 182);
+            textBox10.Multiline = true;
+            textBox10.Name = "textBox10";
+            textBox10.Size = new Size(305, 88);
+            textBox10.TabIndex = 27;
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Location = new Point(6, 159);
+            label11.Name = "label11";
+            label11.Size = new Size(87, 20);
+            label11.TabIndex = 26;
+            label11.Text = "Descripcion";
+            label11.Click += label11_Click;
+            // 
+            // textBox11
+            // 
+            textBox11.Location = new Point(153, 110);
+            textBox11.Name = "textBox11";
+            textBox11.Size = new Size(155, 27);
+            textBox11.TabIndex = 27;
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Location = new Point(153, 87);
+            label12.Name = "label12";
+            label12.Size = new Size(50, 20);
+            label12.TabIndex = 26;
+            label12.Text = "Precio";
             // 
             // Productos
             // 
@@ -340,7 +427,6 @@
         private TextBox textBox9;
         private Label label9;
         private Label label8;
-        private TextBox textBox7;
         private TextBox textBox8;
         private Label label7;
         private GroupBox groupBox2;
@@ -350,13 +436,22 @@
         private GroupBox groupBox1;
         private Button button2;
         private Label label4;
-        private TextBox textBox3;
-        private Label label3;
         private TextBox textBox2;
         private Label label2;
         private TextBox textBox1;
         private Label label1;
         private ComboBox comboBox1;
         private ComboBox comboBox3;
+        private TextBox textBox3;
+        private TextBox textBox4;
+        private Label label3;
+        private TextBox textBox10;
+        private Label label11;
+        private TextBox textBox7;
+        private Label label10;
+        private TextBox textBox6;
+        private Label label6;
+        private TextBox textBox11;
+        private Label label12;
     }
 }
