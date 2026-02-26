@@ -63,6 +63,7 @@
             button1.TabIndex = 12;
             button1.Text = "Cargar";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // groupBox4
             // 
@@ -161,6 +162,7 @@
             button3.TabIndex = 9;
             button3.Text = "Eliminar";
             button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
             // 
             // textBox5
             // 
@@ -202,6 +204,7 @@
             button2.TabIndex = 8;
             button2.Text = "Agregar";
             button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // textBox2
             // 
