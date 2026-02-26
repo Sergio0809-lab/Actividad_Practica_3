@@ -136,14 +136,14 @@ namespace Actividad_Practica_3
                 connection.Open();
 
 
-                string queryInsertarProductos = @"INSERT INTO Productos (NombreProductos, Descripcion, Stock, Categoriaid7, Precio)
-                                           VALUES ('" + textBox2.Text + "','" + textBox6.Text + "'," +
+                string queryInsertarProductos = @"INSERT INTO Productos (Productosid, NombreProductos, Descripcion, Stock, Categoriaid, Precio)
+                                           VALUES ('"+textBox1.Text+"','" + textBox2.Text + "','" + textBox6.Text + "'," +
                                                    "'" + textBox4.Text + "','" + comboBox1.SelectedValue + "'," +
                                                    "'" + textBox7.Text + "')";
 
                 using (SqlCommand cmd = new SqlCommand(queryInsertarProductos, connection))
                 {
-                    4int rowsAffected = cmd.ExecuteNonQuery();
+                    int rowsAffected = cmd.ExecuteNonQuery();
                     if (rowsAffected > 0)
                     {
                         MessageBox.Show("Se ha insertado el producto en la base de datos.");
