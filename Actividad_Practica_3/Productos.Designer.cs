@@ -32,6 +32,11 @@
             groupBox4 = new GroupBox();
             dataGridView1 = new DataGridView();
             groupBox3 = new GroupBox();
+            textBox11 = new TextBox();
+            textBox10 = new TextBox();
+            label12 = new Label();
+            label11 = new Label();
+            textBox3 = new TextBox();
             comboBox3 = new ComboBox();
             button4 = new Button();
             textBox9 = new TextBox();
@@ -44,6 +49,12 @@
             textBox5 = new TextBox();
             label5 = new Label();
             groupBox1 = new GroupBox();
+            textBox7 = new TextBox();
+            label10 = new Label();
+            textBox6 = new TextBox();
+            label6 = new Label();
+            textBox4 = new TextBox();
+            label3 = new Label();
             comboBox1 = new ComboBox();
             button2 = new Button();
             label4 = new Label();
@@ -51,17 +62,6 @@
             label2 = new Label();
             textBox1 = new TextBox();
             label1 = new Label();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
-            label3 = new Label();
-            textBox6 = new TextBox();
-            label6 = new Label();
-            textBox7 = new TextBox();
-            label10 = new Label();
-            textBox10 = new TextBox();
-            label11 = new Label();
-            textBox11 = new TextBox();
-            label12 = new Label();
             groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             groupBox3.SuspendLayout();
@@ -79,6 +79,7 @@
             button1.TabIndex = 12;
             button1.Text = "Cargar";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // groupBox4
             // 
@@ -93,11 +94,11 @@
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(16, 26);
+            dataGridView1.Location = new Point(15, 20);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(1268, 236);
-            dataGridView1.TabIndex = 0;
+            dataGridView1.Size = new Size(1252, 259);
+            dataGridView1.TabIndex = 1;
             // 
             // groupBox3
             // 
@@ -119,6 +120,47 @@
             groupBox3.TabIndex = 10;
             groupBox3.TabStop = false;
             groupBox3.Text = "Actualizar";
+            // 
+            // textBox11
+            // 
+            textBox11.Location = new Point(153, 110);
+            textBox11.Name = "textBox11";
+            textBox11.Size = new Size(155, 27);
+            textBox11.TabIndex = 27;
+            // 
+            // textBox10
+            // 
+            textBox10.Location = new Point(6, 182);
+            textBox10.Multiline = true;
+            textBox10.Name = "textBox10";
+            textBox10.Size = new Size(305, 88);
+            textBox10.TabIndex = 27;
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Location = new Point(153, 87);
+            label12.Name = "label12";
+            label12.Size = new Size(50, 20);
+            label12.TabIndex = 26;
+            label12.Text = "Precio";
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Location = new Point(6, 159);
+            label11.Name = "label11";
+            label11.Size = new Size(87, 20);
+            label11.TabIndex = 26;
+            label11.Text = "Descripcion";
+            label11.Click += label11_Click;
+            // 
+            // textBox3
+            // 
+            textBox3.Location = new Point(26, 113);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(89, 27);
+            textBox3.TabIndex = 19;
             // 
             // comboBox3
             // 
@@ -244,10 +286,58 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Insertar";
             // 
+            // textBox7
+            // 
+            textBox7.Location = new Point(189, 113);
+            textBox7.Name = "textBox7";
+            textBox7.Size = new Size(155, 27);
+            textBox7.TabIndex = 25;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Location = new Point(189, 90);
+            label10.Name = "label10";
+            label10.Size = new Size(50, 20);
+            label10.TabIndex = 24;
+            label10.Text = "Precio";
+            // 
+            // textBox6
+            // 
+            textBox6.Location = new Point(16, 183);
+            textBox6.Multiline = true;
+            textBox6.Name = "textBox6";
+            textBox6.Size = new Size(305, 88);
+            textBox6.TabIndex = 23;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(16, 160);
+            label6.Name = "label6";
+            label6.Size = new Size(87, 20);
+            label6.TabIndex = 22;
+            label6.Text = "Descripcion";
+            // 
+            // textBox4
+            // 
+            textBox4.Location = new Point(16, 113);
+            textBox4.Name = "textBox4";
+            textBox4.Size = new Size(89, 27);
+            textBox4.TabIndex = 21;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(16, 90);
+            label3.Name = "label3";
+            label3.Size = new Size(45, 20);
+            label3.TabIndex = 20;
+            label3.Text = "Stock";
+            // 
             // comboBox1
             // 
             comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Alimentos", "Bebidas", "Limpieza", "Electrónicos" });
             comboBox1.Location = new Point(394, 113);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(93, 28);
@@ -263,6 +353,7 @@
             button2.TabIndex = 8;
             button2.Text = "Agregar";
             button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // label4
             // 
@@ -304,96 +395,6 @@
             label1.TabIndex = 0;
             label1.Text = "ID";
             // 
-            // textBox3
-            // 
-            textBox3.Location = new Point(26, 113);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(89, 27);
-            textBox3.TabIndex = 19;
-            // 
-            // textBox4
-            // 
-            textBox4.Location = new Point(16, 113);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(89, 27);
-            textBox4.TabIndex = 21;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(16, 90);
-            label3.Name = "label3";
-            label3.Size = new Size(45, 20);
-            label3.TabIndex = 20;
-            label3.Text = "Stock";
-            // 
-            // textBox6
-            // 
-            textBox6.Location = new Point(16, 183);
-            textBox6.Multiline = true;
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(305, 88);
-            textBox6.TabIndex = 23;
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Location = new Point(16, 160);
-            label6.Name = "label6";
-            label6.Size = new Size(87, 20);
-            label6.TabIndex = 22;
-            label6.Text = "Descripcion";
-            // 
-            // textBox7
-            // 
-            textBox7.Location = new Point(189, 113);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(155, 27);
-            textBox7.TabIndex = 25;
-            // 
-            // label10
-            // 
-            label10.AutoSize = true;
-            label10.Location = new Point(189, 90);
-            label10.Name = "label10";
-            label10.Size = new Size(50, 20);
-            label10.TabIndex = 24;
-            label10.Text = "Precio";
-            // 
-            // textBox10
-            // 
-            textBox10.Location = new Point(6, 182);
-            textBox10.Multiline = true;
-            textBox10.Name = "textBox10";
-            textBox10.Size = new Size(305, 88);
-            textBox10.TabIndex = 27;
-            // 
-            // label11
-            // 
-            label11.AutoSize = true;
-            label11.Location = new Point(6, 159);
-            label11.Name = "label11";
-            label11.Size = new Size(87, 20);
-            label11.TabIndex = 26;
-            label11.Text = "Descripcion";
-            label11.Click += label11_Click;
-            // 
-            // textBox11
-            // 
-            textBox11.Location = new Point(153, 110);
-            textBox11.Name = "textBox11";
-            textBox11.Size = new Size(155, 27);
-            textBox11.TabIndex = 27;
-            // 
-            // label12
-            // 
-            label12.AutoSize = true;
-            label12.Location = new Point(153, 87);
-            label12.Name = "label12";
-            label12.Size = new Size(50, 20);
-            label12.TabIndex = 26;
-            label12.Text = "Precio";
-            // 
             // Productos
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -406,6 +407,7 @@
             Controls.Add(groupBox1);
             Name = "Productos";
             Text = "Productos";
+            Load += Productos_Load;
             groupBox4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             groupBox3.ResumeLayout(false);
