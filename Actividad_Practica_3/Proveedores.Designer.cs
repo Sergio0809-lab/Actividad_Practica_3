@@ -32,6 +32,7 @@
             groupBox4 = new GroupBox();
             dataGridView1 = new DataGridView();
             groupBox3 = new GroupBox();
+            maskedTextBox2 = new MaskedTextBox();
             button4 = new Button();
             textBox9 = new TextBox();
             textBox6 = new TextBox();
@@ -45,6 +46,7 @@
             textBox5 = new TextBox();
             label5 = new Label();
             groupBox1 = new GroupBox();
+            maskedTextBox1 = new MaskedTextBox();
             button2 = new Button();
             textBox4 = new TextBox();
             label4 = new Label();
@@ -53,8 +55,6 @@
             label2 = new Label();
             textBox1 = new TextBox();
             label1 = new Label();
-            maskedTextBox1 = new MaskedTextBox();
-            maskedTextBox2 = new MaskedTextBox();
             groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             groupBox3.SuspendLayout();
@@ -71,6 +71,7 @@
             button1.TabIndex = 7;
             button1.Text = "Cargar";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // groupBox4
             // 
@@ -108,6 +109,15 @@
             groupBox3.TabIndex = 5;
             groupBox3.TabStop = false;
             groupBox3.Text = "Actualizar";
+            // 
+            // maskedTextBox2
+            // 
+            maskedTextBox2.Font = new Font("Segoe UI", 11F);
+            maskedTextBox2.Location = new Point(26, 147);
+            maskedTextBox2.Mask = "(999) 000-0000";
+            maskedTextBox2.Name = "maskedTextBox2";
+            maskedTextBox2.Size = new Size(164, 32);
+            maskedTextBox2.TabIndex = 18;
             // 
             // button4
             // 
@@ -232,6 +242,15 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Insertar";
             // 
+            // maskedTextBox1
+            // 
+            maskedTextBox1.Font = new Font("Segoe UI", 11F);
+            maskedTextBox1.Location = new Point(6, 147);
+            maskedTextBox1.Mask = "(999) 000-0000";
+            maskedTextBox1.Name = "maskedTextBox1";
+            maskedTextBox1.Size = new Size(164, 32);
+            maskedTextBox1.TabIndex = 11;
+            // 
             // button2
             // 
             button2.BackColor = Color.Cyan;
@@ -299,24 +318,6 @@
             label1.Size = new Size(24, 20);
             label1.TabIndex = 0;
             label1.Text = "ID";
-            // 
-            // maskedTextBox1
-            // 
-            maskedTextBox1.Font = new Font("Segoe UI", 11F);
-            maskedTextBox1.Location = new Point(6, 147);
-            maskedTextBox1.Mask = "(999) 000-0000";
-            maskedTextBox1.Name = "maskedTextBox1";
-            maskedTextBox1.Size = new Size(164, 32);
-            maskedTextBox1.TabIndex = 11;
-            // 
-            // maskedTextBox2
-            // 
-            maskedTextBox2.Font = new Font("Segoe UI", 11F);
-            maskedTextBox2.Location = new Point(26, 147);
-            maskedTextBox2.Mask = "(999) 000-0000";
-            maskedTextBox2.Name = "maskedTextBox2";
-            maskedTextBox2.Size = new Size(164, 32);
-            maskedTextBox2.TabIndex = 18;
             // 
             // Proveedores
             // 

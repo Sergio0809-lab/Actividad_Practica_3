@@ -75,6 +75,7 @@
             button1.TabIndex = 12;
             button1.Text = "Cargar";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // groupBox4
             // 
