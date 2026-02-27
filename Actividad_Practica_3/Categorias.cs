@@ -26,7 +26,40 @@ namespace Actividad_Practica_3
 
         private void button4_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(textBox9.Text))
+            {
+                MessageBox.Show("El ID está incorrecto o vacio.");
+                return;
+            }
+            if (string.IsNullOrEmpty(textBox8.Text))
+            {
+                MessageBox.Show("El  nombre está incorrecto o vacio.");
+                return;
+            }
 
+            string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Actividad_Practica_1;Integrated Security=True;";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+
+                string queryActualizarCategorias = @"UPDATE Categoria
+                                                    SET 
+                                                        NombreCategoria = '" + textBox8.Text + "'" +
+                                                    "WHERE Categoriaid = '" + textBox9.Text + "'";
+
+                using (SqlCommand cmd = new SqlCommand(queryActualizarCategorias, connection))
+                {
+                    int rowsAffected = cmd.ExecuteNonQuery();
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("Se ha actualizado la categoria en la base de datos.");
+                    }
+                }
+
+                connection.Close();
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -38,9 +71,9 @@ namespace Actividad_Practica_3
             {
                 connection.Open();
 
-                string queryProductos = @"SELECT * FROM Categoria ";
+                string queryCategorias = @"SELECT * FROM Categoria ";
 
-                using (SqlCommand cmd = new SqlCommand(queryProductos, connection))
+                using (SqlCommand cmd = new SqlCommand(queryCategorias, connection))
                 {
                     using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
                     {
